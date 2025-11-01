@@ -1,0 +1,26 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Force these files to be CRLF on checkout and LF on commit
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+# Force these files to be LF on checkout and commit
+*.sh text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+
+# Binary files should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.pt binary

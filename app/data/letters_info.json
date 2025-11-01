@@ -1,0 +1,142 @@
+{
+  "Alif": {
+    "name": "Alif (ا)",
+    "pronunciation": "A as in apple",
+    "examples": ["أسد (Asad) – Lion", "أم (Umm) – Mother"]
+  },
+  "Ba": {
+    "name": "Ba (ب)",
+    "pronunciation": "B as in boy",
+    "examples": ["باب (Baab) – Door", "بيت (Bayt) – House"]
+  },
+  "Ta": {
+    "name": "Ta (ت)",
+    "pronunciation": "T as in table",
+    "examples": ["تفاح (Tuffah) – Apple", "تمساح (Timsah) – Crocodile"]
+  },
+  "Tha": {
+    "name": "Tha (ث)",
+    "pronunciation": "Th as in think",
+    "examples": ["ثعلب (Tha'lab) – Fox", "ثلج (Thalj) – Snow"]
+  },
+  "Jeem": {
+    "name": "Jeem (ج)",
+    "pronunciation": "J as in jam",
+    "examples": ["جمل (Jamal) – Camel", "جبن (Jubn) – Cheese"]
+  },
+  "Hha": {
+    "name": "Ḥā' (ح)",
+    "pronunciation": "Deep H, from throat",
+    "examples": ["حب (Ḥubb) – Love", "حلم (Ḥulm) – Dream"]
+  },
+  "Kha": {
+    "name": "Khā' (خ)",
+    "pronunciation": "Kh as in 'Khalid'",
+    "examples": ["خبز (Khubz) – Bread", "خروف (Kharūf) – Sheep"]
+  },
+  "Dal": {
+    "name": "Dāl (د)",
+    "pronunciation": "D as in dog",
+    "examples": ["درج (Daraj) – Stairs", "دب (Dubb) – Bear"]
+  },
+  "Thal": {
+    "name": "Thāl (ذ)",
+    "pronunciation": "Th as in 'this'",
+    "examples": ["ذهب (Dhahab) – Gold", "ذراع (Dhira') – Arm"]
+  },
+  "Ra": {
+    "name": "Rā' (ر)",
+    "pronunciation": "Rolled R",
+    "examples": ["رجل (Rajul) – Man", "رأس (Ra's) – Head"]
+  },
+  "Zay": {
+    "name": "Zay (ز)",
+    "pronunciation": "Z as in zebra",
+    "examples": ["زهرة (Zahra) – Flower", "زيت (Zayt) – Oil"]
+  },
+  "Seen": {
+    "name": "Sīn (س)",
+    "pronunciation": "S as in sun",
+    "examples": ["سمك (Samak) – Fish", "سماء (Samā') – Sky"]
+  },
+  "Sheen": {
+    "name": "Shīn (ش)",
+    "pronunciation": "Sh as in shoe",
+    "examples": ["شمس (Shams) – Sun", "شاي (Shay) – Tea"]
+  },
+  "Sad": {
+    "name": "Ṣād (ص)",
+    "pronunciation": "Heavy S",
+    "examples": ["صبر (Ṣabr) – Patience", "صوت (Ṣawt) – Sound"]
+  },
+  "Dad": {
+    "name": "Ḍād (ض)",
+    "pronunciation": "Heavy D (unique to Arabic)",
+    "examples": ["ضوء (Ḍaw') – Light", "ضرب (Ḍaraba) – Hit"]
+  },
+  "Tta": {
+    "name": "Ṭā' (ط)",
+    "pronunciation": "Emphatic T",
+    "examples": ["طعام (Ṭa'ām) – Food", "طريق (Ṭarīq) – Road"]
+  },
+  "Dha": {
+    "name": "Ẓā' (ظ)",
+    "pronunciation": "Emphatic Th (like 'th' in 'though')",
+    "examples": ["ظرف (Ẓarf) – Envelope", "ظلام (Ẓalām) – Darkness"]
+  },
+  "Ain": {
+    "name": "'Ayn (ع)",
+    "pronunciation": "Deep 'A' from throat",
+    "examples": ["عين ('Ayn) – Eye", "عمل ('Amal) – Work"]
+  },
+  "Ghain": {
+    "name": "Ghayn (غ)",
+    "pronunciation": "Gh (as in French 'r')",
+    "examples": ["غرفة (Ghurfa) – Room", "غنم (Ghanam) – Sheep"]
+  },
+  "Fa": {
+    "name": "Fā' (ف)",
+    "pronunciation": "F as in fish",
+    "examples": ["فم (Fam) – Mouth", "فيل (Fīl) – Elephant"]
+  },
+  "Qaf": {
+    "name": "Qāf (ق)",
+    "pronunciation": "Deep K",
+    "examples": ["قلب (Qalb) – Heart", "قمر (Qamar) – Moon"]
+  },
+  "Kaf": {
+    "name": "Kāf (ك)",
+    "pronunciation": "K as in kite",
+    "examples": ["كتاب (Kitāb) – Book", "كرسي (Kursī) – Chair"]
+  },
+  "Lam": {
+    "name": "Lām (ل)",
+    "pronunciation": "L as in lamp",
+    "examples": ["لبن (Laban) – Milk", "لعب (La'b) – Play"]
+  },
+  "Meem": {
+    "name": "Mīm (م)",
+    "pronunciation": "M as in moon",
+    "examples": ["مدرسة (Madrasa) – School", "ماء (Mā') – Water"]
+  },
+  "Noon": {
+    "name": "Nūn (ن)",
+    "pronunciation": "N as in nose",
+    "examples": ["نار (Nār) – Fire", "نجم (Najm) – Star"]
+  },
+  "Ha": {
+    "name": "Hā' (هـ)",
+    "pronunciation": "Soft H (as in hello)",
+    "examples": ["هواء (Hawā') – Air", "هاتف (Hātif) – Phone"]
+  },
+  "Waw": {
+    "name": "Wāw (و)",
+    "pronunciation": "W as in water",
+    "examples": ["وردة (Wardah) – Flower", "ولد (Walad) – Boy"]
+  },
+  "Ya": {
+    "name": "Yā' (ي)",
+    "pronunciation": "Y as in yes",
+    "examples": ["يد (Yad) – Hand", "يوم (Yawm) – Day"]
+  }
+}

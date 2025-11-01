@@ -1,0 +1,10 @@
+README.md
+setup.py
+app/__init__.py
+app/main.py
+app/schemas.py
+arascan.egg-info/PKG-INFO
+arascan.egg-info/SOURCES.txt
+arascan.egg-info/dependency_links.txt
+arascan.egg-info/requires.txt
+arascan.egg-info/top_level.txt
