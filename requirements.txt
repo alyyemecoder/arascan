@@ -1,7 +1,12 @@
-fastapi
-uvicorn[standard]
-neo4j
-opencv-python
-numpy
-pillow
-python-multipart
+fastapi>=0.95.0
+uvicorn[standard]>=0.21.0
+opencv-python>=4.7.0.72
+numpy>=1.24.0
+pillow>=9.5.0
+python-multipart>=0.0.6
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+python-dotenv>=1.0.0
+ultralytics>=8.0.0
+python-magic>=0.4.27
+python-magic-bin>=0.4.14; platform_system=="Windows"

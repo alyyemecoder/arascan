@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse, FileResponse
+from fastapi.responses import JSONResponse, FileResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import cv2
 import numpy as np
@@ -9,7 +10,8 @@ from pathlib import Path
 import shutil
 import logging
 from ultralytics import YOLO
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
+import json
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -18,15 +20,28 @@ logger = logging.getLogger(__name__)
 # Initialize FastAPI app
 app = FastAPI()
 
-# CORS Middleware Configuration
+# Get the base directory
+BASE_DIR = Path(__file__).resolve().parent.parent
+FRONTEND_DIR = BASE_DIR / "frontend"
+BUILD_DIR = FRONTEND_DIR / "build"
+UPLOAD_DIR = BASE_DIR / "uploads"
+
+# Ensure upload directory exists
+UPLOAD_DIR.mkdir(exist_ok=True, parents=True)
+
+# CORS Middleware Configuration - Only for development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # In production, replace with your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
     expose_headers=["*"]
 )
+
+# Serve static files from React build
+if BUILD_DIR.exists():
+    app.mount("/static", StaticFiles(directory=str(BUILD_DIR / "static")), name="static")
 
 @app.middleware("http")
 async def add_cors_headers(request: Request, call_next):
@@ -166,8 +181,7 @@ class DetectionResponse(BaseModel):
     detection_count: int
 
 # Create uploads directory if it doesn't exist
-UPLOAD_DIR = Path("uploads")
-UPLOAD_DIR.mkdir(exist_ok=True)
+# Upload directory is now defined at the top with other paths
 
 @app.post("/detect/upload", response_model=DetectionResponse)
 async def upload_image(file: UploadFile = File(...)):
@@ -334,7 +348,30 @@ async def get_uploaded_file(filename: str):
         raise HTTPException(status_code=404, detail="File not found")
     return FileResponse(file_path)
 
-# Root endpoint
-@app.get("/")
-async def root():
-    return {"message": "AraScan API is running"}
+# Serve React frontend
+@app.get("/", response_class=HTMLResponse)
+async def serve_frontend():
+    index_path = BUILD_DIR / "index.html"
+    if not index_path.exists():
+        return HTMLResponse(
+            content="""
+            <html>
+                <body>
+                    <h1>Arabic Character Recognition</h1>
+                    <p>Frontend build files not found. Please build the frontend first.</p>
+                </body>
+            </html>
+            """,
+            status_code=404
+        )
+    return FileResponse(index_path)
+
+# API root endpoint
+@app.get("/api")
+async def api_root():
+    return {"message": "Welcome to the Arabic Character Recognition API"}
+
+# Health check endpoint
+@app.get("/api/health")
+async def health_check():
+    return {"status": "ok", "version": "1.0.0"}
